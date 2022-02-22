@@ -1,30 +1,30 @@
-interface User {
-    _id: String;
-    username: String;
-    email: String;
-    avatar: String;
+export interface User {
+    _id: string;
+    username: string;
+    email: string;
+    avatar: string;
     checkCredentials: Promise<User | null>;
 }
 
-interface Chat {
-    _id: String;
+export interface Chat {
+    _id: string;
     members: User[];
     messages: Message[];
-    avatar: String;
+    avatar: string;
 }
 
-interface Message {
-    _id: String;
-    timestamp: Number;
-    sender: String[];
+export interface Message {
+    _id: string;
+    timestamp: number;
+    sender: string[];
     content: Text & Media;
 }
 
-interface Text {
-   text: String
+export interface Text {
+   text: string
 }
 
-interface Media {
-   text: String
+export interface Media {
+   text: string
 }
 
